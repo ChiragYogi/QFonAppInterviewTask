@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">QFonAppInterviewTask</string>
+    <string name="label_current_polls">Current Polls</string>
+    <string name="label_history">History</string>
+    <string name="content_discription_addpollbutton">addPollButton</string>
+    <string name="label_create_poll">Create Poll</string>
+    <string name="content_back_button_add_poll_screen">back button add poll screen</string>
+    <string name="label_poll_question">Poll Question</string>
+    <string name="label_ask_a_question">Ask a question</string>
+    <string name="label_answer_options">Answer options</string>
+    <string name="label_you_can_add_5_more_option">You can add 5 more option</string>
+    <string name="label_add_option">Add option</string>
+    <string name="label_create">Create</string>
+    <string name="label_the_polling_ground_await_your_question">The polling ground await your question</string>
+    <string name="label_no_history_available_contribute_to_polls_and_see_your_journey_here">No History Available. Contribute to polls and See Your Journey here</string>
+    <string name="hint_option">Option</string>
 </resources>

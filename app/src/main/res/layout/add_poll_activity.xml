@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_back_button_add_poll_screen" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/addPollTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_28dp"
+            android:text="@string/label_create_poll"/>
+
+    </Toolbar>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewPollQuestion"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_poll_question"
+        android:layout_marginTop="@dimen/_18dp"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/questionEditText"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_ask_a_question"
+        android:layout_marginTop="@dimen/_18dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewPollQuestion"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewAnswerOption"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_answer_options"
+        android:layout_marginTop="@dimen/_18dp"
+        app:layout_constraintTop_toBottomOf="@id/questionEditText"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewCanAdd5Answer"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_you_can_add_5_more_option"
+        android:layout_marginTop="@dimen/_18dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewAnswerOption"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"/>
+
+    <Button
+        android:id="@+id/addOptionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18dp"
+        android:text="@string/label_add_option"
+        android:drawableTint="@color/white"
+        android:drawableLeft="@drawable/baseline_add_circle_outline_24"
+        app:layout_constraintTop_toBottomOf="@id/textViewCanAdd5Answer"
+
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/pollAnswerOptionRv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/addOptionButton" />
+
+    <Button
+        android:id="@+id/createPollButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_create"
+        android:layout_marginTop="@dimen/_18dp"
+        android:paddingHorizontal="@dimen/_50dp"
+        app:layout_constraintTop_toBottomOf="@id/pollAnswerOptionRv"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

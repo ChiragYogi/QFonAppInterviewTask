@@ -5,7 +5,7 @@
 
 android {
     namespace = "com.example.qfonappinterviewtask"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.qfonappinterviewtask"
@@ -25,6 +25,10 @@ android {
                 "proguard-rules.pro"
             )
         }
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -47,8 +51,8 @@ dependencies {
 
 
     //navigation
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.3")
-    implementation ("androidx.navigation:navigation-ui-ktx:2.7.3")
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.4")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.7.4")
 
     //ktx fro activity and fragment
     implementation("androidx.activity:activity-ktx:1.7.2")
