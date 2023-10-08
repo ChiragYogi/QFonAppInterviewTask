@@ -9,9 +9,15 @@
     <string name="label_ask_a_question">Ask a question</string>
     <string name="label_answer_options">Answer options</string>
     <string name="label_you_can_add_5_more_option">You can add 5 more option</string>
+    <string name="you_can_add">You can add</string>
+    <string name="label_more_option"> more option</string>
     <string name="label_add_option">Add option</string>
     <string name="label_create">Create</string>
     <string name="label_the_polling_ground_await_your_question">The polling ground await your question</string>
     <string name="label_no_history_available_contribute_to_polls_and_see_your_journey_here">No History Available. Contribute to polls and See Your Journey here</string>
     <string name="hint_option">Option</string>
+    <string name="validation_please_add_minimum_2_option_answer_for_poll">Please add minimum 2 option answer for poll</string>
+    <string name="validation_please_add_valid_poll_question">Please add valid poll question</string>
+    <string name="label_0">0%</string>
+    <string name="validation_please_remove_duplicate_value">Please remove duplicate value from answer</string>
 </resources>

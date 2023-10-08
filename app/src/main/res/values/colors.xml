@@ -10,4 +10,5 @@
     <color name="color_blue">#6750a4</color>
     <color name="color_gray">#aaaaaa</color>
     <color name="color_poll_item_border">#cac4d0</color>
+    <color name="color_poll_item_background">#fffbfe</color>
 </resources>

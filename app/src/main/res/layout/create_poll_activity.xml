@@ -53,12 +53,15 @@
         app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
         app:layout_constraintStart_toEndOf="@id/guidelineStart"/>
 
-    <androidx.appcompat.widget.AppCompatEditText
+    <EditText
         android:id="@+id/questionEditText"
         android:layout_width="@dimen/_0dp"
         android:layout_height="wrap_content"
         android:hint="@string/label_ask_a_question"
         android:layout_marginTop="@dimen/_18dp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:maxLength="100"
         app:layout_constraintTop_toBottomOf="@id/textViewPollQuestion"
         app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
         app:layout_constraintStart_toEndOf="@id/guidelineStart"/>
@@ -100,6 +103,7 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         android:id="@+id/pollAnswerOptionRv"
+        app:layout_constraintBottom_toTopOf="@id/createPollButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
         app:layout_constraintStart_toEndOf="@id/guidelineStart"

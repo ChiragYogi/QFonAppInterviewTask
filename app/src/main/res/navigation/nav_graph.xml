@@ -6,10 +6,10 @@
 
     <fragment
         android:id="@+id/currentPollFragment"
-        android:name="com.example.qfonappinterviewtask.ui.currentpoll.CurrentPollFragment"
+        android:name="com.example.qfonappinterviewtask.ui.home.currentpoll.CurrentPollFragment"
         android:label="CurrentPollFragment" />
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.example.qfonappinterviewtask.ui.history.HistoryFragment"
+        android:name="com.example.qfonappinterviewtask.ui.home.history.HistoryFragment"
         android:label="HistoryFragment" />
 </navigation>
