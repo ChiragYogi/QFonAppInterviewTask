@@ -23,6 +23,8 @@
             android:id="@+id/addPollTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"
             android:layout_marginStart="@dimen/_28dp"
             android:text="@string/label_create_poll"/>
 
@@ -49,6 +51,8 @@
         android:layout_height="wrap_content"
         android:text="@string/label_poll_question"
         android:layout_marginTop="@dimen/_18dp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
         app:layout_constraintTop_toBottomOf="@id/toolBar"
         app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
         app:layout_constraintStart_toEndOf="@id/guidelineStart"/>
@@ -72,6 +76,8 @@
         android:layout_height="wrap_content"
         android:text="@string/label_answer_options"
         android:layout_marginTop="@dimen/_18dp"
+        android:textColor="?attr/colorPrimary"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/questionEditText"
         app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
         app:layout_constraintStart_toEndOf="@id/guidelineStart"/>

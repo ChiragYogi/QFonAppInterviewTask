@@ -19,8 +19,6 @@ interface PollDao {
     @Query("SELECT * FROM polls_database WHERE pollQuestionAnswered == 0 ORDER BY id DESC")
     fun getCurrentPollList(): Flow<List<PollsList>>
 
-
-
     @Update
     suspend fun updatePollsList(pollsList: PollsList)
 

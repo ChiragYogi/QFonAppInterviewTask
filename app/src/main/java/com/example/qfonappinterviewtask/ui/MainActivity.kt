@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setUpNavigationAndBottomBar()
         setUpClickListener()
+
     }
 
     private fun setUpClickListener() {
@@ -65,6 +66,11 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        homeViewModel.navigatedToNextScreenConfirm(true)
     }
 
 }

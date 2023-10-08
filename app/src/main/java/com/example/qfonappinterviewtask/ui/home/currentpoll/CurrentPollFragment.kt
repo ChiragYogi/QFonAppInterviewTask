@@ -52,15 +52,16 @@ class CurrentPollFragment : Fragment() {
 
     private fun setUpViewRecyclerView() {
 
-        pollsListRecyclerView = PollsListRecyclerView(false) { data, chiledIndex, patentIndex ->
+        pollsListRecyclerView = PollsListRecyclerView(false) { data, childIndex, parentIndex ->
 
             Log.d(
                 "current poll",
-                "data is ${data} and at chield is ${chiledIndex} parent is ${patentIndex}"
+                "data is ${data} and at child is ${childIndex} parent is ${parentIndex}"
             )
+
             if (currentPoll.isNotEmpty()) {
-                val question = pollsListRecyclerView.pollsList[patentIndex].pollQuestionTitle
-                val id = pollsListRecyclerView.pollsList[patentIndex].id
+                val question = pollsListRecyclerView.pollsList[parentIndex].pollQuestionTitle
+                val id = pollsListRecyclerView.pollsList[parentIndex].id
 
                 val hasSameItemInList = currentPoll.find { it.pollQuestionTitle == question }
 
@@ -85,8 +86,8 @@ class CurrentPollFragment : Fragment() {
             } else {
                 currentPoll.add(
                     PollsList(
-                        id=pollsListRecyclerView.pollsList[patentIndex].id,
-                        pollQuestionTitle = pollsListRecyclerView.pollsList[patentIndex].pollQuestionTitle,
+                        id=pollsListRecyclerView.pollsList[parentIndex].id,
+                        pollQuestionTitle = pollsListRecyclerView.pollsList[parentIndex].pollQuestionTitle,
                         pollQuestionAnswered = true, pollsList = data
                     )
                 )

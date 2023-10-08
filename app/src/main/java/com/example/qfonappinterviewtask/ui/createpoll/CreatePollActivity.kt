@@ -165,16 +165,13 @@ class CreatePollActivity : AppCompatActivity() {
 
         for (i in list) {
             if (!uniqueItems.add(i)) {
-                // A duplicate item was found
                 return true
             }
         }
-
-        // No duplicate items found
         return false
     }
 
-    fun showToast(message: String){
+    private fun showToast(message: String){
         Toast.makeText(this,message, Toast.LENGTH_LONG).show()
     }
 }

@@ -33,11 +33,9 @@ class HomeViewModel @Inject constructor(private val pollDao: PollDao) : ViewMode
     private val _onNavigateToNextScreen= MutableLiveData<Boolean>()
     val onNavigateToNextScreen:LiveData<Boolean> get() = _onNavigateToNextScreen
     fun navigatedToNextScreenConfirm(isNavigating: Boolean){
-        Log.d("navigate to next screen value is", "value is in view model ${isNavigating}")
         _onNavigateToNextScreen.postValue(isNavigating)
     }
     fun updateDataInDao(list: MutableList<PollsList>){
-        Log.d("list in viewmodel","${list}")
         val currentSleetedPollList = arrayListOf<PollsList>()
         for (i in list){
             if (i.pollQuestionAnswered){
@@ -58,9 +56,6 @@ class HomeViewModel @Inject constructor(private val pollDao: PollDao) : ViewMode
               _onNavigateToNextScreen.postValue(false)
             }
         }
-
-
-        Log.d("currentlist","${currentSleetedPollList}")
 
     }
 

@@ -71,4 +71,5 @@ class HistoryFragment : Fragment() {
         homeViewModel.navigatedToNextScreenConfirm(false)
     }
 
+
 }
